@@ -25,16 +25,18 @@ function GetMessage(message) {
     }
   });
 }
-
-router.route("/").get((req, res) => {
-  try {
-    GetMessage();
-    res.status(200).json({ message: "route loaded " + message });
-  } catch (error) {
-    res.status(400).send("Error, something went wrong.");
-  }
+router.use(function(req, res, next) {
+  next();
 });
 
-module.exports = {
-  GetMessage: GetMessage
-};
+router.get("/", (req, res) => {
+  // try {
+  res.send("some route");
+  // GetMessage();
+  // res.status(200).json({ message: "route loaded " + message });
+  // } catch (error) {
+  //   res.status(400).send("Error, something went wrong.");
+  // }
+});
+
+module.exports = router;
