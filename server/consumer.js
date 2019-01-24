@@ -1,20 +1,20 @@
 const kafka = require("kafka-node");
 const Consumer = kafka.Consumer;
-const client = kafka.Client("localhost:2181");
+var express = require("express");
 const router = express.Router();
 
-topics = [
-  {
-    topic: "employees"
-  }
-];
-const options = {
-  autoCommit: true
-};
-
-const consumer = new kafka.Consumer(client, topics, options);
-
 function GetMessage(message) {
+  const client = kafka.Client("localhost:2181");
+  topics = [
+    {
+      topic: "employees"
+    }
+  ];
+  const options = {
+    autoCommit: true
+  };
+
+  const consumer = new kafka.Consumer(client, topics, options);
   this.message = message;
   consumer.on("message", function(message, err) {
     if (err) {
