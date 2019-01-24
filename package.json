@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "name": "kafka_test_frontend",
+  "productName": "kafka_test_frontend",
+  "description": "test  frontentd for kafka streams",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "poi",
+    "build": "poi build",
+    "report": "poi build --bundle-report",
+    "serve": "serve dist --single",
+    "test": "tyu"
+  },
+  "author": {
+    "name": "jbull328",
+    "email": "jackbull328@gmail.com"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "csv-parse": "^4.3.1",
+    "express": "^4.16.4",
+    "kafka-node": "^4.0.0",
+    "nodemon": "^1.18.9",
+    "normalize.css": "^7.0.0",
+    "object-assign": "^4.1.1",
+    "promise-polyfill": "^6.0.2"
+  },
+  "devDependencies": {
+    "poi": "^9.0.0",
+    "poi-preset-bundle-report": "^2.0.0",
+    "serve": "^6.1.0",
+    "tyu": "^1.0.4"
+  }
+}
