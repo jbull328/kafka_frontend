@@ -10,12 +10,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get("/", function(req, res) {
-  res.send("landing");
-});
+app.get("/", GetMessage);
 
-var port = process.env.PORT || 4005;
-
-app.listen(() => {
-  console.log("listening on port " + port);
+app.listen(process.env.PORT || 3000, function() {
+  console.log("Kafka Frontend Dev site running");
 });
