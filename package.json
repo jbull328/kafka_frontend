@@ -17,16 +17,21 @@
     "email": "jackbull328@gmail.com"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.12",
+    "@fortawesome/free-solid-svg-icons": "^5.6.3",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "csv-parse": "^4.3.1",
     "express": "^4.16.4",
+    "i": "^0.3.6",
     "kafka-connect": "^3.7.0",
     "kafka-node": "^3.0.1",
     "node-zookeeper-client": "^0.2.3",
     "nodemon": "^1.18.9",
     "normalize.css": "^7.0.0",
+    "npm": "^6.7.0",
     "object-assign": "^4.1.1",
     "promise-polyfill": "^6.0.2"
   },

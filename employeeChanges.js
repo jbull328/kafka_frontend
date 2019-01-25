@@ -21,7 +21,7 @@ producer.on("error", function(err) {
   console.error("Problem with producing Kafka message " + err);
 });
 
-const inputFile = "./dataFiles/MOCK_Employee_DATA.csv";
+const inputFile = "./dataFiles/MOCK_Employee_Changes.csv";
 
 var dataArray = [];
 
@@ -39,7 +39,7 @@ function handleData(currentData) {
     f_name: line[0],
     l_name: line[1],
     hire_date: line[2],
-    event_id: "emp_chg_01"
+    event_id: line[3]
   };
   console.log(JSON.stringify(dataNode));
   produceDataMessage(dataNode);
