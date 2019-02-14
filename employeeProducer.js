@@ -23,9 +23,9 @@ producer.on("error", function(err) {
 
 const inputFile = "./dataFiles/MOCK_Employee_DATA.csv";
 
-var dataArray = [];
+let dataArray = [];
 
-var parser = parse({ delimiter: "," }, function(err, data) {
+let parser = parse({ delimiter: "," }, function(err, data) {
   dataArray = data;
   handleData(1);
 });

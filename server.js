@@ -1,8 +1,7 @@
-var express = require("express"),
-  path = require("path"),
-  bodyParser = require("body-parser"),
-  cors = require("cors");
-var GetMessage = require("./consumer");
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const GetMessage = require("./consumer");
 
 
 
